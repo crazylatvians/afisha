@@ -1,5 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/torbjon/afisha.png)](http://travis-ci.org/torbjon/afisha)
-
+[![Dependency Status](https://gemnasium.com/torbjon/afisha.png)](https://gemnasium.com/torbjon/afisha)
 
 ## Цель проекта
 * разрабатывать приложение, которое бы максимально полно отвечало на вопросы, какие события сегодня, завтра будут в Риге, куда сходить?
