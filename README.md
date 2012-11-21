@@ -14,7 +14,8 @@
 * Другие источники: [ind-ex.lv](http://www.ind-ex.lv)
 
 ## Технологии
-rails, scss, erb, rspec, pg, js, backbone.js
+Отвечаем на вопрос: а где haml и coffeeScript? Некоторые из нас, очень сильно любят их, но мы хотели, чтобы проект был бы понятен большему числу пользователей и мы нарошно стараемся не усложняем его.<br><br>
+Что мы планируем использовать: [Rails](https://github.com/rails/rails), [scss](http://sass-lang.com/), [erb](http://en.wikipedia.org/wiki/ERuby), [rspec](http://rspec.info/)/[capybara](https://github.com/jnicklas/capybara), [nokogiri](https://github.com/sparklemotion/nokogiri), pg/mysql, js, [backbone.js](http://backbonejs.org/)
 
 ## Design
 minimal, bootstrap elements
