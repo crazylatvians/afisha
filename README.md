@@ -3,10 +3,6 @@
 * поработать над красивым, неспешным, правильным, умным кодом в хорошей компании, после работы.
 * предоставить возможность любому, исправить ошибку, добавить своё видение, сообщить о баге.
 
-##  Требования
-* интерфейс на русском и латышском
-* авторизация facebook и автономная
-
 ## Источники
 * Кино: [forumcinemas.lv](http://forumcinemas.lv/), [cinamonkino.lv](htp//www.cinamonkino.lv), [multikino.lv](http://multikino.lv), [splendidpalace.lv](splendidpalace.lv)
 * Театр: [dailesteatris.lv](http://www.dailesteatris.lv/), [trd.lv](http://www.trd.lv/), [teatris.lv](http://www.teatris.lv/), [opera.lv](http://www.opera.lv), [jrt.lv](http://www.jrt.lv/)
@@ -23,8 +19,8 @@ minimal, bootstrap elements
 ## Примеры
 [afisha.ru](http://afisha.ru)
 
-## Как участвовать?
-Прежде всего взгляните на [roadmap](https://github.com/torbjon/afisha/wiki/Roadmap) и посмотрите, куда мы идём, в чём мы нуждаемся.
+## Планы и kак участвовать?
+Взгляните на [roadmap](https://github.com/torbjon/afisha/wiki/Roadmap) и посмотрите, куда мы идём, в чём мы нуждаемся.
 
 Форкайте проект, вносите изменения, покрывайте тестами и пуляйте обратно.
 
