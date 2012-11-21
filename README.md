@@ -11,7 +11,7 @@
 
 ## Технологии
 Отвечаем на вопрос: а где мой любимый haml и coffeeScript? Некоторые из нас, любят и видят большую ценность в них, но мы хотели, чтобы проект был бы понятен большему числу пользователей и тем кто мало знаком web разработкой, и нарошно стараемся не усложнять его.<br><br>
-Что мы планируем использовать: [Rails](https://github.com/rails/rails), [scss](http://sass-lang.com/), [erb](http://en.wikipedia.org/wiki/ERuby), [rspec](http://rspec.info/)/[capybara](https://github.com/jnicklas/capybara), [nokogiri](https://github.com/sparklemotion/nokogiri), pg/mysql, js, [backbone.js](http://backbonejs.org/)
+Что мы планируем использовать: [rails](https://github.com/rails/rails), [scss](http://sass-lang.com/), [erb](http://en.wikipedia.org/wiki/ERuby), [rspec](http://rspec.info/)/[capybara](https://github.com/jnicklas/capybara), [nokogiri](https://github.com/sparklemotion/nokogiri), pg/mysql, js, [backbone.js](http://backbonejs.org/)
 
 ## Design
 minimal, bootstrap elements
