@@ -10,6 +10,7 @@
 * Кино: [forumcinemas.lv](http://forumcinemas.lv/), [cinamonkino.lv](htp//www.cinamonkino.lv), [multikino.lv](http://multikino.lv), [splendidpalace.lv](splendidpalace.lv)
 * Театр: [dailesteatris.lv](http://www.dailesteatris.lv/), [trd.lv](http://www.trd.lv/), [teatris.lv](http://www.teatris.lv/), [opera.lv](http://www.opera.lv), [jrt.lv](http://www.jrt.lv/)
 * Концерты: [hbf.lv](http://www.hbf.lv/), [arenariga.com](http://www.arenariga.com/), [sapnufabrika.lv](http://www.sapnufabrika.lv)
+* Сервисы продажи билетов: [bilesuparadize.lv](http://bilesuparadize.lv/events), [bilesuserviss.lv](http://www.bilesuserviss.lv/)
 * Другие источники: [ind-ex.lv](http://www.ind-ex.lv), [intelligent.lv](http://intelligent.lv/ru/15343_20001.html)
 
 ## Технологии
