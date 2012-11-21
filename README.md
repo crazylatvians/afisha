@@ -22,7 +22,7 @@ minimal, bootstrap elements
 ## Примеры
 [afisha.ru](http://afisha.ru)
 
-## Kak участвовать
+## Как участвовать?
 Прежде всего взгляните на [roadmap](https://github.com/torbjon/afisha/wiki/Roadmap) и посмотрите, куда мы идём, в чём мы нуждаемся.
 
 Форкайте проект, вносите изменения, покрывайте тестами и пуляйте обратно.
