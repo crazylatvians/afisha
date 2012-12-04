@@ -4,6 +4,7 @@ gem 'rails', '3.2.9'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'devise'
+gem 'nokogiri'
 
 group :assets do
   gem 'sass-rails'
@@ -22,5 +23,9 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+  gem "spork", github: "sporkrb/spork"
+  gem "guard-spork"
 end
 
