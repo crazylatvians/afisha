@@ -12,7 +12,7 @@
 * Театр: [dailesteatris.lv](http://www.dailesteatris.lv/), [trd.lv](http://www.trd.lv/), [teatris.lv](http://www.teatris.lv/), [opera.lv](http://www.opera.lv), [jrt.lv](http://www.jrt.lv/)
 * Концерты: [hbf.lv](http://www.hbf.lv/), [arenariga.com](http://www.arenariga.com/), [sapnufabrika.lv](http://www.sapnufabrika.lv)
 * Сервисы продажи билетов: [bilesuparadize.lv](http://bilesuparadize.lv/events), [bilesuserviss.lv](http://www.bilesuserviss.lv/)
-* Другие источники: [ind-ex.lv](http://www.ind-ex.lv), [intelligent.lv](http://intelligent.lv/ru/15343_20001.html)
+* Другие источники: [1188.lv/izklaide](http://www.1188.lv/izklaide/), [ind-ex.lv](http://www.ind-ex.lv), [intelligent.lv](http://intelligent.lv/ru/15343_20001.html)
 
 ## Технологии
 Отвечаем на вопрос: а где мой любимый haml и coffeeScript? Некоторые из нас, любят и видят большую ценность в них, но мы хотели, чтобы проект был бы понятен большему числу пользователей и тем кто мало знаком web разработкой, и нарошно стараемся не усложнять его.<br><br>
