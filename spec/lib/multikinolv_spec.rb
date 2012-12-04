@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'multikinolv.rb'
 
 describe "Miltikino parser" do
   
