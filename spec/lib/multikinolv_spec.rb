@@ -8,7 +8,6 @@ describe "Miltikino parser" do
 
   it "should return list of movies" do
     @afisha.get_movies.size.should > 0
-    # puts @afisha.get_movies
   end
 
 end

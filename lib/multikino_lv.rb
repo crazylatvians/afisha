@@ -2,8 +2,8 @@ class MultikinoLv
 
   def initialize date = nil
     require "open-uri"
-    date ||= "2012-12-05"
-    @doc = Nokogiri::HTML(open("http://multikino.lv/lv/filmas/riga/#{date}/"))
+    date       ||= "2012-12-05"
+    @doc         = Nokogiri::HTML(open("http://multikino.lv/lv/filmas/riga/#{date}/"))
     @domain_path = "http://www.multikino.lv"
   end
 
