@@ -25,7 +25,7 @@ minimal, bootstrap elements
 [afisha.ru](http://afisha.ru), [fandango.com](http://www.fandango.com/), [imdb.com/showtimes](http://www.imdb.com/showtimes/location/US/85001/2012-11-22)
 
 ## Планы и kак участвовать?
-Куда мы идём и в чём мы нуждаемся: [Roadmap](https://github.com/crazylatvians/afisha) 
+Куда мы идём и в чём мы нуждаемся: [Roadmap](https://github.com/crazylatvians/afisha/wiki) 
 
 Форкайте проект, вносите изменения, покрывайте тестами и пуляйте обратно.
 
