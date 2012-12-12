@@ -1,3 +1,5 @@
+<h2>MultikinoLV</h2>
+
 <table>
   <th>
     <tr>
@@ -7,7 +9,28 @@
       <td>url</td>
     </tr>
   </th>
-  <% @afisha.get_movies.each do |movie|%>
+  <% @afisha.get_lv_movies.each do |movie|%>
+    <tr>
+      <td><%= movie[:title] %></td>
+      <td><%= movie[:showings].join(", ") %></td>
+      <td><%= movie[:description] %></td>
+      <td><%= movie[:url] %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>MultikinoRU</h2>
+
+<table>
+  <th>
+    <tr>
+      <td>title</td>
+      <td>showings</td>
+      <td>description</td>
+      <td>url</td>
+    </tr>
+  </th>
+  <% @afisha.get_ru_movies.each do |movie|%>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>

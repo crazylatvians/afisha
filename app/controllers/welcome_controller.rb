@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @afisha = MultikinoLv.new(Date.tomorrow)
+    @afisha = Multikino.new(Date.tomorrow)
   end
 
 end
