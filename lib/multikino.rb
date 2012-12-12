@@ -21,22 +21,18 @@ class Multikino
   private
 
   def doc_looping doc
-    arr = []
-    doc.css("ul.image-list li").each do |item|
-      swowtime = []
+    doc.css("ul.image-list li").select do |item|
       i = item.css("h2 a.title")
+      swowtime = item.css("div.showings a.active").map { |i| i.content.gsub("\n", "").strip }
       if i.present?
-        item.css("div.showings a.active").each { |st| swowtime << st.content.gsub("\n", "").strip }
-        
-        arr << {
-                  title:        i.first.content, 
-                  showings:     swowtime,
-                  description:  item.css("p.text").first.content.gsub("\n", "").strip,
-                  url:          "#{@domain_path}#{item.css("a.button-more").first["href"]}" 
-               }
+        {
+          title:        i.first.content, 
+          showings:     swowtime,
+          description:  item.css("p.text").first.content.gsub("\n", "").strip,
+          url:          "#{@domain_path}#{item.css("a.button-more").first["href"]}"
+        }
       end
     end
-    arr
   end
 
 end
