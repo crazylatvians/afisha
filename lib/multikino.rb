@@ -1,8 +1,10 @@
+require "open-uri"
+
 class Multikino
 
-  def initialize date = nil
-    require "open-uri"
-    @date       ||= "2012-12-05"
+  attr_accessor :date
+
+  def initialize date
     @domain_path = "http://www.multikino.lv"
   end
 
