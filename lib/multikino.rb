@@ -8,12 +8,12 @@ class Multikino
   end
 
   def get_lv_movies
-    @doc = Nokogiri::HTML(open("http://multikino.lv/lv/filmas/riga/#{@date}/"))
+    @doc = Nokogiri::HTML(open("#{@domain_path}/lv/filmas/riga/#{@date}/"))
     doc_looping(@doc).compact
   end
 
   def get_ru_movies
-    @doc = Nokogiri::HTML(open("http://multikino.lv/ru/filmas/riga/#{@date}/"))
+    @doc = Nokogiri::HTML(open("#{@domain_path}/ru/filmas/riga/#{@date}/"))
     doc_looping(@doc).compact
   end
 
