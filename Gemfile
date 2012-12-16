@@ -5,8 +5,8 @@ gem 'jquery-rails'
 gem 'sqlite3'
 gem 'devise'
 gem 'nokogiri'
-gem 'execjs'
-gem 'therubyracer'
+# gem 'execjs'
+# gem 'therubyracer'
 
 group :assets do
   gem 'sass-rails'
