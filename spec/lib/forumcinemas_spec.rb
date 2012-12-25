@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe "Miltikino" do
+describe "Forumcinemas" do
   
   before(:each) do
-    @afisha = Multikino.new(Date.tomorrow)
+    @afisha = Forumcinemas.new(Date.tomorrow)
   end
 
   it "should return list of lv movies" do

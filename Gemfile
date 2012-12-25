@@ -4,9 +4,7 @@ gem 'rails', '3.2.9'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'devise'
-gem 'nokogiri'
-# gem 'execjs'
-# gem 'therubyracer'
+gem 'mechanize'
 
 group :assets do
   gem 'sass-rails'
@@ -27,7 +25,7 @@ group :test, :development do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'rb-fsevent'
-  gem "spork", github: "sporkrb/spork"
-  gem "guard-spork"
+  gem 'spork', github: 'sporkrb/spork'
+  gem 'guard-spork'
 end
 

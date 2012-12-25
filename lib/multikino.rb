@@ -1,30 +1,32 @@
-require "open-uri"
+require 'open-uri'
+require 'mechanize'
 
 class Multikino
 
   def initialize date
     @date = date
-    @domain_path = "http://www.multikino.lv"
+    @domain_path = 'http://www.multikino.lv'
+    @agent = Mechanize.new
   end
 
   def get_lv_movies
-    @doc = Nokogiri::HTML(open("#{@domain_path}/lv/filmas/riga/#{@date}/"))
-    doc_looping(@doc)
+    page = @agent.get("#{@domain_path}/lv/filmas/riga/#{@date}")
+    doc_looping(page)
   end
 
   def get_ru_movies
-    @doc = Nokogiri::HTML(open("#{@domain_path}/ru/filmas/riga/#{@date}/"))
-    doc_looping(@doc)
+    page = @agent.get("#{@domain_path}/ru/filmas/riga/#{@date}")
+    doc_looping(page)
   end
 
   private
   
   def doc_looping doc
-    doc.css("ul.image-list li").select { |item| item.css("h2 a.title").present? }.map { |item| grab_item(item) }
+    doc.search('ul.image-list li').select { |a| a.css('h2 a.title').present? }.map { |b| grab_item(b) }
   end
 
   def grab_item item
-    swowtime = item.css("div.showings a.active").map { |i| DateTime.parse("#{@date} #{i.content.strip}") }
+    swowtime = item.search('div.showings a.active').map { |i| DateTime.parse("#{@date} #{i.content.strip}") }
     {
       title:        item.css("h2 a.title").first.content, 
       showings:     swowtime,

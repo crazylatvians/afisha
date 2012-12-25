@@ -9,7 +9,7 @@
       <td>url</td>
     </tr>
   </th>
-  <% @afisha.get_lv_movies.each do |movie|%>
+  <% @multikino.get_lv_movies.each do |movie|%>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>
@@ -18,6 +18,8 @@
     </tr>
   <% end %>
 </table>
+
+<hr>
 
 <h2>MultikinoRU</h2>
 
@@ -30,7 +32,54 @@
       <td>url</td>
     </tr>
   </th>
-  <% @afisha.get_ru_movies.each do |movie|%>
+  <% @multikino.get_ru_movies.each do |movie|%>
+    <tr>
+      <td><%= movie[:title] %></td>
+      <td><%= movie[:showings].join(", ") %></td>
+      <td><%= movie[:description] %></td>
+      <td><%= movie[:url] %></td>
+    </tr>
+  <% end %>
+</table>
+
+<hr>
+
+<h2>ForumcinemasLV</h2>
+
+<table>
+  <th>
+    <tr>
+      <td>title</td>
+      <td>showings</td>
+      <td>description</td>
+      <td>url</td>
+    </tr>
+  </th>
+  <% @forumcinemas.get_lv_movies.each do |movie|%>
+    <tr>
+      <td><%= movie[:title] %></td>
+      <td><%= movie[:showings].join(", ") %></td>
+      <td><%= movie[:description] %></td>
+      <td><%= movie[:url] %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<hr>
+
+<h2>ForumcinemasRU</h2>
+
+<table>
+  <th>
+    <tr>
+      <td>title</td>
+      <td>showings</td>
+      <td>description</td>
+      <td>url</td>
+    </tr>
+  </th>
+  <% @forumcinemas.get_ru_movies.each do |movie|%>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>
