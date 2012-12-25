@@ -27,12 +27,11 @@ class Multikino
 
   def grab_item item
     swowtime = item.search('div.showings a.active').map { |i| DateTime.parse("#{@date} #{i.content.strip}") }
-    {
-      title:        item.css("h2 a.title").first.content, 
+    
+    { title:        item.css("h2 a.title").first.content, 
       showings:     swowtime,
       description:  item.css("p.text").first.content.gsub("\n", "").strip,
-      url:          "#{@domain_path}#{item.css("a.button-more").first["href"]}"
-    }
+      url:          "#{@domain_path}#{item.css("a.button-more").first["href"]}" }
   end
 
 end

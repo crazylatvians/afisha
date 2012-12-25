@@ -22,17 +22,17 @@ class Forumcinemas
   private
 
   def doc_looping doc
-    doc.search('.results .result').select { |a| a.search('.tableGradient a').present? }.map { |b| grab_item(b) }
+    doc.search('.results .result').select do |a| 
+      a.search('.tableGradient a').present? 
+    end.map { |b| grab_item(b) }
   end
 
   def grab_item item
     swowtime = item.search('.tableGradient a').map { |i| DateTime.parse("#{@date} #{i.content.strip}") }
-    {
-      title:        item.search('.small_txt .result_h').first.content.gsub('\n', '').strip,
+    { title:        item.search('.small_txt .result_h').first.content.gsub('\n', '').strip,
       showings:     swowtime,
       description:  item.search('.small_txt div')[1].content.gsub('\n', '').strip,
-      url:          item.search('a.arrowLink').first['href']
-    }
+      url:          item.search('a.arrowLink').first['href'] }
   end
 
 end
