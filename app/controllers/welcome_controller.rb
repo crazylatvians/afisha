@@ -1,14 +1,8 @@
 class WelcomeController < ApplicationController
 
   def index
-    @multikino = Multikino.new(Date.tomorrow)
-    @forumcinemas = Multikino.new(Date.tomorrow)
-    # logger.debug "+++++++++++++++++++"
-    # logger.debug @afisha.get_lv_movies.inspect
-    # logger.debug "+++++++++++++++++++"
-    # logger.debug @afisha.get_ru_movies.inspect
-    # logger.debug "+++++++++++++++++++"
-        
+    @multikino    = Multikino.new(Date.tomorrow)
+    @forumcinemas = Forumcinemas.new(Date.tomorrow)    
   end
 
 end

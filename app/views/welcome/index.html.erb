@@ -55,7 +55,7 @@
       <td>url</td>
     </tr>
   </th>
-  <% @forumcinemas.get_lv_movies.each do |movie|%>
+  <% @forumcinemas.get_lv_movies.each do |movie| %>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>
@@ -64,7 +64,6 @@
     </tr>
   <% end %>
 </table>
-
 
 <hr>
 
@@ -79,7 +78,7 @@
       <td>url</td>
     </tr>
   </th>
-  <% @forumcinemas.get_ru_movies.each do |movie|%>
+  <% @forumcinemas.get_ru_movies.each do |movie| %>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>

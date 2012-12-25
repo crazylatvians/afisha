@@ -20,7 +20,7 @@ class Multikino
   end
 
   private
-  
+
   def doc_looping doc
     doc.search('ul.image-list li').select { |a| a.css('h2 a.title').present? }.map { |b| grab_item(b) }
   end

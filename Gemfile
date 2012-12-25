@@ -28,4 +28,3 @@ group :test, :development do
   gem 'spork', github: 'sporkrb/spork'
   gem 'guard-spork'
 end
-

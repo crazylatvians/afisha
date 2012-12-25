@@ -10,33 +10,29 @@ class Forumcinemas
   end
 
   def get_lv_movies
-    page = @agent.get("#{@domain_path}/Movies/NowInTheatres/?dt=#{@date}&X-Requested-With=XMLHttpRequest")
-    # binding.pry
+    page = @agent.get("#{@domain_path}/Movies/NowInTheatres/?dt=#{@date}")
     doc_looping(page)
-    # cities.reject! { |c| c.empty? }
   end
 
   def get_ru_movies
-    page = @agent.get("#{@domain_path}/rus/Movies/NowInTheatres/?dt=#{@date}&X-Requested-With=XMLHttpRequest")
+    page = @agent.get("#{@domain_path}/rus/Movies/NowInTheatres/?dt=#{@date}")
     doc_looping(page)
   end
 
   private
-  
+
   def doc_looping doc
-    doc.search('.results .result').map { |a| grab_item(a) }
+    doc.search('.results .result').select { |a| a.search('.tableGradient a').present? }.map { |b| grab_item(b) }
   end
 
   def grab_item item
     swowtime = item.search('.tableGradient a').map { |i| DateTime.parse("#{@date} #{i.content.strip}") }
-    if swowtime.present?
-      {
-        title:        item.search('.small_txt .result_h').first.content.gsub('\n', '').strip,
-        showings:     swowtime,
-        description:  item.search('.small_txt div')[1].content.gsub('\n', '').strip,
-        url:          item.search('a.arrowLink').first['href']
-      }
-    end
+    {
+      title:        item.search('.small_txt .result_h').first.content.gsub('\n', '').strip,
+      showings:     swowtime,
+      description:  item.search('.small_txt div')[1].content.gsub('\n', '').strip,
+      url:          item.search('a.arrowLink').first['href']
+    }
   end
 
 end
