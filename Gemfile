@@ -17,6 +17,7 @@ group :assets do
   gem 'sass-rails'
   gem 'uglifier'
   gem 'bourbon'
+  gem 'neat'
 end
 
 group :development do

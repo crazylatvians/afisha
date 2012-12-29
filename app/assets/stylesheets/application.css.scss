@@ -1,0 +1,30 @@
+/*
+ *= require normalize
+ *= require_self
+ */
+
+@import "bourbon";
+@import "neat";
+
+body { background: #fbfbfb; }
+
+.pull_left { float: left; }
+.pull_right { float: right; }
+
+.header {
+  height: 33px; background: #333; font-size: 14px; color: #ababab;
+
+  .container {
+    @include outer-container;
+    @include clearfix;
+
+    .brand, .user { margin-top: 8px; }
+    .brand { @extend .pull_left; }
+    .user { @extend .pull_right; }
+
+    a {
+      color: #aaa; padding: 5px 10px; margin: 2px 4px; text-decoration: none;
+      &:hover { color: #fff; background: #424242; }
+    }
+  }
+}

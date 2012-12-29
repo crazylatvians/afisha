@@ -1,0 +1,14 @@
+<div class="header">
+  <div class="container">
+    <div class="brand">
+      <a href="/">1Afisha</a>
+    </div>
+    <div class="user">
+      <% if user_signed_in? %>
+        <%= current_user.fullname %>, <%= link_to "logout", destroy_user_session_path %>
+      <% else %>
+        <%= link_to "login", new_user_session_path %>
+      <% end %>  
+    </div>
+  </div>
+</div>
