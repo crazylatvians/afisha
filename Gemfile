@@ -22,6 +22,7 @@ end
 
 group :development do
   gem 'thin'
+  gem 'pry-rails'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'sextant'

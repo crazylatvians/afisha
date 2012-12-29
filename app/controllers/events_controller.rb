@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class EventsController < ApplicationController
 
   def index
     # @multikino    = Multikino.new(Date.tomorrow)
@@ -9,5 +9,5 @@ class WelcomeController < ApplicationController
     # @forumcinemas_lv = @forumcinemas.get_lv_movies
     # @forumcinemas_ru = @forumcinemas.get_ru_movies
   end
-
+  
 end

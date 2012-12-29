@@ -5,9 +5,10 @@
     </div>
     <div class="user">
       <% if user_signed_in? %>
-        <%= current_user.fullname %>, <%= link_to "logout", destroy_user_session_path %>
+        <img src="https://graph.facebook.com/<%= current_user.uid %>/picture" class="avatar">
+        <%= current_user.fullname %>  <%= link_to t('logout'), destroy_user_session_path %>
       <% else %>
-        <%= link_to "login", new_user_session_path %>
+        <%= link_to t('login'), user_omniauth_authorize_path(:facebook) %>
       <% end %>  
     </div>
   </div>

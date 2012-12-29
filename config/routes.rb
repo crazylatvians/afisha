@@ -1,9 +1,14 @@
 Afisha::Application.routes.draw do
 
-  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
+  match "/lv", to: redirect("/")
   
-  resources :users, only: :show
+  scope "(:locale)", locale: /lv|ru/ do
+    devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
+    
+    resources :users, only: :show
+    resources :events
 
-  root to: 'welcome#index'
+    root to: 'events#index'
+  end
   
 end
