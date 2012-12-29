@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121211234130) do
+ActiveRecord::Schema.define(:version => 20121229123103) do
 
   create_table "events", :force => true do |t|
     t.string   "title_en"
@@ -22,8 +22,12 @@ ActiveRecord::Schema.define(:version => 20121211234130) do
     t.text     "description_ru"
     t.integer  "length"
     t.integer  "type_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
   create_table "places", :force => true do |t|
@@ -41,6 +45,18 @@ ActiveRecord::Schema.define(:version => 20121211234130) do
     t.datetime "time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.integer  "sign_in_count",      :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
 end

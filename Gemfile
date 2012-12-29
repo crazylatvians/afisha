@@ -2,10 +2,16 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem 'jquery-rails'
+
 gem 'sqlite3'
-gem 'devise'
+gem 'mysql2', '~> 0.3.7'
+
 gem 'mechanize'
 gem 'paperclip'
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :assets do
   gem 'sass-rails'
