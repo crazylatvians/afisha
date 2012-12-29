@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Miltikino" do
-  
+
   before(:each) do
     @afisha = Multikino.new(Date.tomorrow)
   end

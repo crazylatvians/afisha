@@ -37,6 +37,10 @@ GEM
     addressable (2.3.2)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
     bourbon (3.0.1)
       sass (>= 3.2.0)
       thor
@@ -50,6 +54,7 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
+    cocaine (0.4.2)
     coderay (1.0.8)
     daemons (1.1.9)
     database_cleaner (0.9.1)
@@ -71,7 +76,7 @@ GEM
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
     ffi (1.2.0)
-    guard (1.6.0)
+    guard (1.6.1)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
@@ -117,6 +122,12 @@ GEM
     nokogiri (1.5.6)
     ntlm-http (0.1.1)
     orm_adapter (0.4.0)
+    paperclip (3.4.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.4.0)
+      mime-types
     polyglot (0.3.3)
     pry (0.9.10)
       coderay (~> 1.0.5)
@@ -210,6 +221,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
   bourbon
   capybara
   database_cleaner
@@ -220,6 +233,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mechanize
+  paperclip
   quiet_assets
   rails (= 3.2.9)
   rb-fsevent

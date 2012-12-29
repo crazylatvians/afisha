@@ -9,7 +9,7 @@
       <td>url</td>
     </tr>
   </th>
-  <% @multikino.get_lv_movies.each do |movie|%>
+  <% @multikino_lv.each do |movie|%>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>
@@ -32,7 +32,7 @@
       <td>url</td>
     </tr>
   </th>
-  <% @multikino.get_ru_movies.each do |movie|%>
+  <% @multikino_ru.each do |movie|%>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>
@@ -55,7 +55,7 @@
       <td>url</td>
     </tr>
   </th>
-  <% @forumcinemas.get_lv_movies.each do |movie| %>
+  <% @forumcinemas_lv.each do |movie| %>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>
@@ -78,7 +78,7 @@
       <td>url</td>
     </tr>
   </th>
-  <% @forumcinemas.get_ru_movies.each do |movie| %>
+  <% @forumcinemas_ru.each do |movie| %>
     <tr>
       <td><%= movie[:title] %></td>
       <td><%= movie[:showings].join(", ") %></td>

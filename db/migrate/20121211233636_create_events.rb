@@ -12,5 +12,7 @@ class CreateEvents < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_attachment :events, :poster
   end
 end
