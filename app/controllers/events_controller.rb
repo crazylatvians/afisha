@@ -5,11 +5,11 @@ class EventsController < ApplicationController
   end
 
   def show
-    @multikino = Multikino.new(Date.tomorrow)
-    @multikino_showtimes = @multikino.get_showtimes
+    # @multikino = Multikino.new(Date.tomorrow)
+    # @multikino_showtimes = @multikino.get_showtimes
     
-    @forumcinemas = Forumcinemas.new(Date.tomorrow)
-    @forumcinemas_showtimes = @forumcinemas.get_showtimes
+    # @forumcinemas = Forumcinemas.new(Date.tomorrow)
+    # @forumcinemas_showtimes = @forumcinemas.get_showtimes
 
     @event = Event.find(params[:id])
   end

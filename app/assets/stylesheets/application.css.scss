@@ -1,5 +1,6 @@
 /*
  *= require normalize
+ *= require select2
  *= require_self
  */
 
@@ -75,7 +76,14 @@ a {
     }
 
     .event_showtime {
-      @include span-columns(4); 
+      @include span-columns(4);
+      .showtime_block { 
+        padding: 10px; margin-top: 76px;
+        .select2-choice { color: #000; font-size: 12px; }
+        a.place { display: block; font-size: 15px; color: #000; margin: 12px 0 8px; }
+      }
+
+
     }
   }
 }

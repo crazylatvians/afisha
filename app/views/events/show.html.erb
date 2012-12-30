@@ -22,16 +22,22 @@
     </div>
 
     <div class="event_showtime">
-      <h2>Forumcinemas</h2>
-      10:00, 12:00, 14:00
+      <div class="showtime_block">
+        <select name="period" class="chzn-select" style="width: 100%;">
+          <option value="1">Сегодня</option>
+          <option value="2">Завтра</option>
+        </select>
 
-      <h2>Cinamon</h2>
-      10:00, 12:00, 14:00
+        <a href="" class="place">Forumcinemas</a>
+        <a href="" style="color: #ccc;">10:00</a>, <a href="">12:00</a>, <a href="">14:00</a>
 
+        <a href="" class="place">Cinamon</a>
+        10:00, 12:00, 14:00
+      </div>
     </div>
 
   </div>
 </div>
 
 
-<%= render "movies" %>
+<%#= render "movies" %>

@@ -21,6 +21,7 @@ group :assets do
   gem 'uglifier'
   gem 'bourbon'
   gem 'neat'
+  gem 'select2-rails'
 end
 
 group :development do
