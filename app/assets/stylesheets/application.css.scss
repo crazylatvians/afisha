@@ -5,8 +5,8 @@
  */
 
 @import "bourbon";
+@import "grid-settings";
 @import "neat";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic-ext,latin-ext);
 
 body {
   font: 13px 'Open Sans', sans-serif;
@@ -25,12 +25,11 @@ a {
 .pull_right { float: right; }
 
 .header {
-  height: 33px; font-size: 13px; color: #ababab;
+  height: 33px; color: #ababab;
   background: #333; 
   
   .container {
     @include outer-container;
-    @include clearfix;
 
     .brand { float: left; margin-top: 7px; }
     .user { float: right; margin-top: 7px; }
@@ -45,45 +44,42 @@ a {
 }
 
 .main {
-  .container {
-    @include clearfix;
-    @include outer-container;
-    @include border-bottom-radius(2px);
-    background: #fff;
-    padding: 20px;
-  
-    ul { 
-      padding: 0; margin: 0;
-      list-style-type: none;
-      li { 
-        float: left; margin: 0 20px 20px 0; width: 120px; height: 240px; font-size: 11px;
-        img { display: block; margin-bottom: 6px; width: 120px; }
-      }
+  @include clearfix;
+  @include outer-container;
+  @include border-bottom-radius(2px);
+  background: #fff;
+  // box-shadow: 0 0 14px #C2C2BE;
+  padding: 20px;
+
+  ul { 
+    padding: 0; margin: 0;
+    list-style-type: none;
+    li { 
+      float: left; margin: 0 20px 20px 0; width: 120px; height: 240px; font-size: 11px;
+      img { display: block; margin-bottom: 6px; width: 120px; }
     }
+  }
 
-    a {
-      color: blue;
-      &:hover { color: red; }
-    }
+  a {
+    color: blue;
+    &:hover { color: red; }
+  }
 
-    form {
-      .controls { margin-bottom: 10px; }
-      .actions { margin-top: 20px; }
-    }
+  form {
+    .controls { margin-bottom: 10px; }
+    .actions { margin-top: 20px; }
+  }
 
-    .event_details {
-      @include span-columns(8);
-    }
+  .event_details {
+    @include span-columns(8);
+  }
 
-    .event_showtime {
-      @include span-columns(4);
-      .showtime_block { 
-        padding: 10px; margin-top: 76px;
-        .select2-choice { color: #000; font-size: 12px; }
-        a.place { display: block; font-size: 15px; color: #000; margin: 12px 0 8px; }
-      }
-
-
+  .event_showtime {
+    @include span-columns(4);
+    .showtime_block { 
+      margin-top: 46px;
+      .select2-choice { color: #000; font-size: 12px; }
+      a.place { display: block; font-size: 15px; color: #000; margin: 12px 0 8px; }
     }
   }
 }

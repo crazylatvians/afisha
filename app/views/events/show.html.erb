@@ -1,42 +1,40 @@
 <%= render "shared/header" %>
 
 <div class="main">
-  <div class="container">
     
-    <div class="event_details">
+  <div class="event_details">
 
-      <div>
-        <%= link_to "edit", edit_event_path(@locale, @event.id) %> | 
-        <%= link_to "delete", event_path(@locale), confirm: 'Are you sure?', method: "delete" %>
-      </div>
-
-      <h1><%= @event.title(@locale) %></h1>
-
-      <% if @event.trailer.present? %>
-        <iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/<%= @event.trailer.split("?v=")[1] %>?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-      <% end %>
-
-      <%= image_tag @event.poster, width: 200 %>
-
-      <%= @event.description(@locale) %>  
+    <div>
+      <%= link_to "edit", edit_event_path(@locale, @event.id) %> | 
+      <%= link_to "delete", event_path(@locale), confirm: 'Are you sure?', method: "delete" %>
     </div>
 
-    <div class="event_showtime">
-      <div class="showtime_block">
-        <select name="period" class="chzn-select" style="width: 100%;">
-          <option value="1">Сегодня</option>
-          <option value="2">Завтра</option>
-        </select>
+    <h1><%= @event.title(@locale) %></h1>
 
-        <a href="" class="place">Forumcinemas</a>
-        <a href="" style="color: #ccc;">10:00</a>, <a href="">12:00</a>, <a href="">14:00</a>
+    <% if @event.trailer.present? %>
+      <iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/<%= @event.trailer.split("?v=")[1] %>?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <% end %>
 
-        <a href="" class="place">Cinamon</a>
-        10:00, 12:00, 14:00
-      </div>
-    </div>
+    <%= image_tag @event.poster, width: 200 %>
 
+    <%= @event.description(@locale) %>  
   </div>
+
+  <div class="event_showtime">
+    <div class="showtime_block">
+      <select name="period" class="chzn-select" style="width: 100%;">
+        <option value="1">Сегодня</option>
+        <option value="2">Завтра</option>
+      </select>
+
+      <a href="" class="place">Forumcinemas</a>
+      <a href="" style="color: #ccc;">10:00</a>, <a href="">12:00</a>, <a href="">14:00</a>
+
+      <a href="" class="place">Cinamon</a>
+      10:00, 12:00, 14:00
+    </div>
+  </div>
+
 </div>
 
 
