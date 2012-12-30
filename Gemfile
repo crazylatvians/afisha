@@ -13,6 +13,9 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+gem 'friendly_id'
+gem 'rack-rewrite'
+
 group :assets do
   gem 'sass-rails'
   gem 'uglifier'

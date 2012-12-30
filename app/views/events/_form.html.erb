@@ -1,0 +1,26 @@
+<%= form_for @event, html: { multipart: true } do |f| %>
+
+  <%= f.label :title_en %>  
+  <div class="controls"><%= f.text_field :title_en %></div>
+
+  <%= f.label :title_lv %>  
+  <div class="controls"><%= f.text_field :title_lv %></div>
+  
+  <%= f.label :description_lv %>  
+  <div class="controls"><%= f.text_area :description_lv, rows: 4 %></div>
+
+  <%= f.label :title_ru %>  
+  <div class="controls"><%= f.text_field :title_ru %></div>
+
+  <%= f.label :description_ru %>  
+  <div class="controls"><%= f.text_area :description_ru, rows: 4 %></div>
+  
+  <%= f.label :poster %>  
+  <div class="controls"><%= f.file_field :poster %></div>
+  
+  <div class="actions">
+    <%= f.submit "Сохранить" %>
+    <%= link_to "Отменить", events_path %>
+  </div>
+  
+<% end %>

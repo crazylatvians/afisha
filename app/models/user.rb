@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  
-  devise :database_authenticatable, :registerable, :recoverable, :omniauthable, :trackable
+
+  devise :database_authenticatable, :omniauthable, :trackable
 
   attr_accessible :name, :email, :password, :provider, :uid
 

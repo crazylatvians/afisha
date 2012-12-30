@@ -15,11 +15,12 @@ ActiveRecord::Schema.define(:version => 20121229123103) do
 
   create_table "events", :force => true do |t|
     t.string   "title_en"
-    t.text     "description_en"
     t.string   "title_lv"
     t.text     "description_lv"
+    t.string   "slug_lv"
     t.string   "title_ru"
     t.text     "description_ru"
+    t.string   "slug_ru"
     t.integer  "length"
     t.integer  "type_id"
     t.datetime "created_at",          :null => false
@@ -29,6 +30,9 @@ ActiveRecord::Schema.define(:version => 20121229123103) do
     t.integer  "poster_file_size"
     t.datetime "poster_updated_at"
   end
+
+  add_index "events", ["slug_lv"], :name => "index_events_on_slug_lv"
+  add_index "events", ["slug_ru"], :name => "index_events_on_slug_ru"
 
   create_table "places", :force => true do |t|
     t.string   "name_en"

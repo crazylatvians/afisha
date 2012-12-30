@@ -59,6 +59,10 @@ module Afisha
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 %r{^/(.*)/$}, '/$1'
+    end
+
     config.autoload_paths += Dir["#{config.root}/lib", "#{config.root}/lib/**/"]
   end
 end

@@ -66,5 +66,12 @@ a {
       color: blue;
       &:hover { color: red; }
     }
+
+    form {
+      .controls { margin-bottom: 10px; }
+      .actions { margin-top: 20px; }
+    }
   }
 }
+
+

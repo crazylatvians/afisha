@@ -1,3 +1,29 @@
 lv:
   login: "Ieiet"
   logout: "Iziet"
+
+i18n:
+    transliterate:
+      rule:
+        ā: "a"
+        ē: "e"
+        ī: "i"
+        ū: "u"
+        č: "c"
+        ģ: "g"
+        ņ: "n"
+        ķ: "k"
+        ļ: "l"
+        š: "s"
+        ž: "z"
+        Ā: "a"
+        Ē: "e"
+        Ī: "i"
+        Ū: "u"
+        Č: "c"
+        Ģ: "g"
+        Ņ: "n"
+        Ķ: "k"
+        Ļ: "l"
+        Š: "s"
+        Ž: "z"
