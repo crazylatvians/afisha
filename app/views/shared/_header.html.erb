@@ -1,7 +1,11 @@
 <div class="header">
   <div class="container">
     <div class="brand">
-      <a href="/">1Afisha</a>
+      <a href="/<%= @locale %>">1Afisha</a>
+      <a href="/lv">lv</a>
+      <a href="/ru">ru</a>
+
+      <a href="/<%= @locale %>/events/new">add event</a>
     </div>
     <div class="user">
       <% if user_signed_in? %>

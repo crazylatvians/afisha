@@ -2,7 +2,11 @@
 
 <div class="main">
   <div class="container">
-
+    <div>
+      <%= link_to "edit", edit_event_path(@locale, @event.id) %> | 
+      <%= link_to "delete", event_path(@locale), confirm: 'Are you sure?', method: "delete" %>
+    </div>
+    
     <%= @event.inspect %>
 
   </div>

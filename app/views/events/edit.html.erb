@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+
+<div class="main">
+  <div class="container">
+
+    <h1>Редактировать мероприятие</h1>
+    <%= form_for @event, url: event_path(@locale, @event.id), method: "put",  html: { multipart: true } do |f| %>
+      <%= render 'form', f: f %>
+    <% end %>
+
+  </div>
+</div>

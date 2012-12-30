@@ -8,6 +8,7 @@ class EventsController < ApplicationController
     # @forumcinemas = Forumcinemas.new(Date.tomorrow)    
     # @forumcinemas_lv = @forumcinemas.get_lv_movies
     # @forumcinemas_ru = @forumcinemas.get_ru_movies
+    @events = Event.all
   end
 
   def show
@@ -37,7 +38,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     
     if @event.update_attributes(params[:event])
-      redirect_to admin_banks_path
+      redirect_to "/#{@locale}/#{@event.slug_lv}"
     else
       render action: "edit"
     end
@@ -47,7 +48,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event.destroy
 
-    redirect_to admin_banks_path
+    redirect_to "/"
   end
 
 end

@@ -4,32 +4,12 @@
   <div class="container">
     
     <ul>
-    <% 10.times do %>
+    <% @events.each do |event| %>      
       <li>
-        <a href="#">
-          <img src="http://trailers.apple.com/trailers/dreamworks/turbo/images/poster.jpg" alt="">
-        </a>
-        <a href="#">Turbo</a>
+        <%= link_to image_tag(event.poster.url(:thumb)), event_slug(event) %>
+        <%= link_to event_title(event), event_slug(event) %>
       </li>
-      <li>
-        <a href="#">
-          <img src="http://trailers.apple.com/trailers/paramount/paingain/images/poster.jpg" alt="">
-        </a>
-        <a href="#">Pain & Gain</a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="http://trailers.apple.com/trailers/dreamworks/madagascar3/images/poster.jpg" alt="">
-        </a>
-        <a href="#">Madagascar 3: Europe's Most Wanted</a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="http://trailers.apple.com/trailers/wb/theincredibleburtwonderstone/images/poster.jpg" alt="">
-        </a>
-        <a href="#">The Incredible Burt Wo...</a>
-      </li>
-      <% end %>
+    <% end %>
     </ul>
 
   </div>
