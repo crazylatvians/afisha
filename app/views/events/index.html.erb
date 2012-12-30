@@ -6,8 +6,8 @@
     <ul>
     <% @events.each do |event| %>      
       <li>
-        <%= link_to image_tag(event.poster.url(:thumb)), event_slug(event) %>
-        <%= link_to event_title(event), event_slug(event) %>
+        <%= link_to image_tag(event.poster.url(:thumb)), event.slug(@locale) %>
+        <%= link_to event.title(@locale), event.slug(@locale) %>
       </li>
     <% end %>
     </ul>

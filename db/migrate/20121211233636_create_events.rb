@@ -10,6 +10,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string    :slug_ru
       t.integer   :length
       t.integer   :type_id
+      t.string    :trailer
 
       t.timestamps
     end  

@@ -10,7 +10,6 @@
 body {
   font: 13px 'Open Sans', sans-serif;
   background: #f2f2f2;
-  // background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/wp-content/themes/tweaker6/images/bgnoise.png);
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-smooth: always;
@@ -25,8 +24,7 @@ a {
 .pull_right { float: right; }
 
 .header {
-  height: 33px; font-size: 13px; color: #ababab; margin-bottom: 20px;
-  // background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/navy_blue.png);
+  height: 33px; font-size: 13px; color: #ababab;
   background: #333; 
   
   .container {
@@ -49,7 +47,7 @@ a {
   .container {
     @include clearfix;
     @include outer-container;
-    border-radius: 2px;
+    @include border-bottom-radius(2px);
     background: #fff;
     padding: 20px;
   
@@ -70,6 +68,14 @@ a {
     form {
       .controls { margin-bottom: 10px; }
       .actions { margin-top: 20px; }
+    }
+
+    .event_details {
+      @include span-columns(8);
+    }
+
+    .event_showtime {
+      @include span-columns(4); 
     }
   }
 }

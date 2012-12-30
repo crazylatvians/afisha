@@ -9,13 +9,8 @@ class Forumcinemas
     @agent = Mechanize.new
   end
 
-  def get_lv_movies
+  def get_showtimes
     page = @agent.get("#{@domain_path}/Movies/NowInTheatres/?dt=#{@date}")
-    doc_looping(page)
-  end
-
-  def get_ru_movies
-    page = @agent.get("#{@domain_path}/rus/Movies/NowInTheatres/?dt=#{@date}")
     doc_looping(page)
   end
 
@@ -31,7 +26,6 @@ class Forumcinemas
     swowtime = item.search('.tableGradient a').map { |i| DateTime.parse("#{@date} #{i.content.strip}") }
     { title:        item.search('.small_txt .result_h').first.content.gsub('\n', '').strip,
       showings:     swowtime,
-      description:  item.search('.small_txt div')[1].content.gsub('\n', '').strip,
       url:          item.search('a.arrowLink').first['href'] }
   end
 

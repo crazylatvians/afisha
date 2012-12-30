@@ -5,17 +5,12 @@ class Multikino
 
   def initialize date
     @date = date
-    @domain_path = 'http://www.multikino.lv'
+    @domain_path = 'http://www.multikino.lv/lv'
     @agent = Mechanize.new
   end
 
-  def get_lv_movies
-    page = @agent.get("#{@domain_path}/lv/filmas/riga/#{@date}")
-    doc_looping(page)
-  end
-
-  def get_ru_movies
-    page = @agent.get("#{@domain_path}/ru/filmas/riga/#{@date}")
+  def get_showtimes
+    page = @agent.get("#{@domain_path}/filmas/riga/#{@date}")
     doc_looping(page)
   end
 
@@ -30,7 +25,6 @@ class Multikino
     
     { title:        item.css("h2 a.title").first.content, 
       showings:     swowtime,
-      description:  item.css("p.text").first.content.gsub("\n", "").strip,
       url:          "#{@domain_path}#{item.css("a.button-more").first["href"]}" }
   end
 

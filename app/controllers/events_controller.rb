@@ -1,17 +1,16 @@
 class EventsController < ApplicationController
 
-  def index
-    # @multikino    = Multikino.new(Date.tomorrow)
-    # @multikino_lv = @multikino.get_lv_movies
-    # @multikino_ru = @multikino.get_ru_movies
-    
-    # @forumcinemas = Forumcinemas.new(Date.tomorrow)    
-    # @forumcinemas_lv = @forumcinemas.get_lv_movies
-    # @forumcinemas_ru = @forumcinemas.get_ru_movies
+  def index    
     @events = Event.all
   end
 
   def show
+    @multikino = Multikino.new(Date.tomorrow)
+    @multikino_showtimes = @multikino.get_showtimes
+    
+    @forumcinemas = Forumcinemas.new(Date.tomorrow)
+    @forumcinemas_showtimes = @forumcinemas.get_showtimes
+
     @event = Event.find(params[:id])
   end
 
@@ -28,7 +27,7 @@ class EventsController < ApplicationController
     @event.set_friendly_id(params[:event][:title_ru], :ru)
 
     if @event.save
-      redirect_to event_path(@locale, @event.id)
+      redirect_to @event.slug
     else
       render action: "new"
     end
@@ -38,7 +37,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     
     if @event.update_attributes(params[:event])
-      redirect_to "/#{@locale}/#{@event.slug_lv}"
+      redirect_to @event.slug
     else
       render action: "edit"
     end

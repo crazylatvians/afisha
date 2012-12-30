@@ -2,12 +2,36 @@
 
 <div class="main">
   <div class="container">
-    <div>
-      <%= link_to "edit", edit_event_path(@locale, @event.id) %> | 
-      <%= link_to "delete", event_path(@locale), confirm: 'Are you sure?', method: "delete" %>
-    </div>
     
-    <%= @event.inspect %>
+    <div class="event_details">
+
+      <div>
+        <%= link_to "edit", edit_event_path(@locale, @event.id) %> | 
+        <%= link_to "delete", event_path(@locale), confirm: 'Are you sure?', method: "delete" %>
+      </div>
+
+      <h1><%= @event.title(@locale) %></h1>
+
+      <% if @event.trailer.present? %>
+        <iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/<%= @event.trailer.split("?v=")[1] %>?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <% end %>
+
+      <%= image_tag @event.poster, width: 200 %>
+
+      <%= @event.description(@locale) %>  
+    </div>
+
+    <div class="event_showtime">
+      <h2>Forumcinemas</h2>
+      10:00, 12:00, 14:00
+
+      <h2>Cinamon</h2>
+      10:00, 12:00, 14:00
+
+    </div>
 
   </div>
 </div>
+
+
+<%= render "movies" %>

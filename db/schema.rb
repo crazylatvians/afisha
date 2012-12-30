@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20121229123103) do
     t.string   "slug_ru"
     t.integer  "length"
     t.integer  "type_id"
+    t.string   "trailer"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.string   "poster_file_name"
