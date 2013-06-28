@@ -16,13 +16,18 @@ gem 'omniauth-facebook'
 gem 'friendly_id'
 gem 'rack-rewrite'
 
+gem "active_model_serializers"
+
+
 group :assets do
   gem 'sass-rails'
   gem 'uglifier'
   gem 'bourbon'
   gem 'neat'
   gem 'select2-rails'
+  gem 'ember-rails'
 end
+
 
 group :development do
   gem 'thin'

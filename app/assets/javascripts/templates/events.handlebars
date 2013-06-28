@@ -1,0 +1,11 @@
+<div id='container'>
+
+	<h1>Events</h1>
+  {{#each model}}
+  {{#linkTo 'event' this }}<h2>{{title_lv}}</h2>{{/linkTo}}	
+  {{/each}}
+</div>
+
+<div id='event'>
+	{{ outlet}}
+</div>

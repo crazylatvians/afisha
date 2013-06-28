@@ -6,10 +6,10 @@ Afisha::Application.routes.draw do
     devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
     resources :users, only: :show
 
-    match "/:locale/:id"  => "events#show"
+    # match "/:locale/:id"  => "events#show"
     resources :events, except: :show
 
-    root to: 'events#index'
+    root to: 'application#index'
   end
   
 end

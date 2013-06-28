@@ -1,7 +1,32 @@
 class EventsController < ApplicationController
 
   def index    
-    @events = Event.all
+    render json: Event.all
+# [{
+#   id: 1,
+#   title_lv: 'lv 1',
+#   title_en: '1'
+# }, {
+#   id: 2,
+#   title_lv: 'lv 2',
+#   title_en: '2'
+# }, {
+#   id: 3,
+#   title_lv: 'lv 3',
+#   title_en: '3'
+# }, {
+#   id: 4,
+#   title_lv: 'lv 4',
+#   title_en: '4'
+# }, {
+#   id: 5,
+#   title_lv: 'lv 5',
+#   title_en: '5'
+# }, {
+#   id: 6,
+#   title_lv: 'lv 6',
+#   title_en: '6'
+# }]
   end
 
   def show
