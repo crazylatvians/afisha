@@ -64,5 +64,8 @@ module Afisha
     end
 
     config.autoload_paths += Dir["#{config.root}/lib", "#{config.root}/lib/**/"]
+
+    # Set proper env for ember
+    config.ember.variant = Rails.env.production? ? :production : :development
   end
 end
