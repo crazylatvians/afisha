@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   end
 
   def fullname
-    name.blank? ? email : name
+    name.presence || email
   end
 
 end
